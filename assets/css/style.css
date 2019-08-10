@@ -3,6 +3,7 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
+    background-color:#000000;
 }
 /* dont know why its not working just like the  */
 a:hover {
@@ -10,7 +11,7 @@ a:hover {
 }
 #sideNavContainer{
     display: none;
-    z-index: -1;
+    z-index: 1;
     position: absolute;
     background-color: rgba(10,10,10,0.7);
     width: 240px;
@@ -19,12 +20,117 @@ a:hover {
 
 #mainSectionContainer{
     height: 100%;
+    margin: 10px;
 }
-
-.columnContainer{
-    margin-top: 20px;
+#mainContentContainer{
+    display: flex;
 }
 
 .leftPadding{
     padding-left: 240px;
+}
+
+.signInContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.column{
+    background-color: rgb(30,30,30);
+    border-radius: 5px;
+    padding: 20px;
+    color: rgba(255,255,255,0.9);
+}
+
+.header{
+    padding: 10px 0px;
+}
+.header h3{
+    font-size: 24px;
+    margin: 0;
+    padding-top: 16px;
+}
+.header span{
+    font-size: 13px;
+}
+.signInContainer .column .loginForm form button[type="submit"]{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-top: 8px;
+}
+.signInContainer .column .loginForm form input{
+    background-color: rgb(30,30,30);
+    color: rgba(255,255,255,0.9);
+    border-radius: 0;
+    border:none;
+    border-bottom: 1px solid black;
+}
+.signInContainer .column .loginForm form .form-group{
+    margin-bottom: 10px;
+}
+
+.signInContainer .column .signUpMessage{
+    color: white;
+}
+
+.signInContainer .column .loginForm form .errorMessage{
+    color: red;
+    font-size: 12px;
+    font-weight: 400;
+}
+#uploadForm{
+    color:white;
+}
+.watchLeftColumn{
+    flex:1;
+}
+.watchLeftColumn .videoPlayer{
+    width: 100%;
+}
+.suggestions{
+    max-width: 375px;
+    flex-grow: 1;
+    height:100%;
+    padding-left:24px;
+}
+.videoInfo{
+    padding: 20px 0 8px 0;
+    width: 100%;
+}
+.videoInfo h1{
+    display:block;
+    overflow:hidden;
+    font-size:25px;
+    line-height:24px;
+}
+.bottomSection{
+    display:flex;
+}
+.videoInfo .bottomSection .viewCount{
+    font-size: 16px;
+    flex:1;
+}
+.videoInfo .bottomSection .controls{
+    float: 1;
+    text-align: right;
+}
+.videoInfo .bottomSection .controls button{
+    padding:0;
+    border:none;
+    font-size: 11px;
+    font-weight: 500;
+    cursor: pointer;
+    color: rgba(255,255,255,0.7);
+    padding-right: 2px;
+}
+.videoInfo .bottomSection .controls button image{
+    height: 20px;
+    width: 20px;
+    padding: 4px 8px 8px 8px;
+    border-radius: 2px;
+    background-color: rgba(255,255,255,0.3);
 }

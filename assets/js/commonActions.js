@@ -24,3 +24,7 @@ $(document).ready(function(){
      main.toggleClass("leftPadding");
    });
  });
+
+ function notSignedIn() {
+   alert("You must be signed in to perform this action");
+}

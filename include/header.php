@@ -1,3 +1,11 @@
+<?php 
+require_once("config.php");
+require_once("classes/users.php");
+require_once("classes/video.php");
+
+$usernameLoggedIn=isset($_SESSION["userLoggedIn"])?$_SESSION["userLoggedIn"]:"";
+$userLoggedInObj=new User($conn1,$usernameLoggedIn);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,13 +16,14 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="assets/js/commonActions.js"></script>
 </head>
-<body>
+
+<body style="background-color:#000000;color:white">
     <nav class="navbar navbar-expand navbar-dark bg-dark">    
         <button id="sideNavButton" class="btn" style="margin-right:10px; background-color:transparent;">
             <img src="assets/images/icons/menu.png">
         </button>
         <a class="navbar-brand" href="index.php" id="logo">
-            <img src="assets/images/icons/VideoTubeLogo.png" title="logo" alt="Site logo" style="width:97px; height:25px">
+            <img src="assets/images/icons/VideoTubeLogo.png" title="logo" alt="Site logo" style="width:97px; height:25px;background-color:rgba(255,255,255,0.9);border-radius:5px;">
         </a>
         <div style="margin:0 auto;">
             <form class="form-inline my-0">
@@ -23,7 +32,7 @@
             </form><ul class="navbar-nav mr-auto">
         </div>
         <a href="uploads.php" class="my-2 my-sm-0"><img src="assets/images/icons/upload.png" alt=""></a>
-        <a href="" class="my-2 my-sm-0"><img src="assets/images/profilepictures/default.png" style="margin-left:15px; width:30px; height:30px;"alt=""></a>
+        <a href="signUp.php" class="my-2 my-sm-0"><img src="assets/images/profilepictures/default.png" style="margin-left:15px; width:30px; height:30px;"alt=""></a>
     </nav>
     <div id="sideNavContainer">
         SDgaslghsk
